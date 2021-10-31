@@ -22,7 +22,6 @@ test('проверка основного персонажа', () => {
 });
 
 test('проверка повышение уровня персонажем', () => {
-  const unit = new Character('робингуд', 'Boweman');
   const unit3 = {
     name: 'робингуд',
     type: 'Boweman',
@@ -31,11 +30,12 @@ test('проверка повышение уровня персонажем', ()
     attack: 30,
     defence: 30,
   };
-  expect(unit.levelUp()).toBe(unit3);
+  const unit = new Character('робингуд', 'Boweman');
+  unit.levelUp()
+  expect(unit).toEqual(unit3);
 });
 
 test('проверка получения урона персонажем', () => {
-  const unit = new Character('стрелок', 'Boweman');
   const unit4 = {
     name: 'стрелок',
     type: 'Boweman',
@@ -44,5 +44,7 @@ test('проверка получения урона персонажем', () =
     attack: 25,
     defence: 25,
   };
-  expect(unit.damage(10)).toBe(unit4);
+  const unit = new Character('стрелок', 'Boweman');
+  unit.damage(10)
+  expect(unit).toEqual(unit4);
 });
