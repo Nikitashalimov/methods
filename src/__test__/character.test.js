@@ -11,18 +11,18 @@ test('проверка по выбору класса', () => {
 });
 
 test('проверка основного персонажа', () => {
-  const unit = new Character('лучник', 'Boweman');
-  const unit2 = {
+  const unit2 = new Character('лучник', 'Boweman');
+  const unit3 = {
     name: 'лучник',
     type: 'Boweman',
     health: 100,
     level: 1,
   };
-  expect(unit).toEqual(unit2);
+  expect(unit2).toEqual(unit3);
 });
 
 test('проверка повышение уровня персонажем', () => {
-  const unit3 = {
+  const unit4 = {
     name: 'робингуд',
     type: 'Boweman',
     health: 100,
@@ -30,13 +30,13 @@ test('проверка повышение уровня персонажем', ()
     attack: 30,
     defence: 30,
   };
-  const unit = new Character('робингуд', 'Boweman');
-  unit.levelUp()
-  expect(unit).toEqual(unit3);
+  const unit5 = new Character('робингуд', 'Boweman');
+  unit5.levelUp()
+  expect(unit5).toEqual(unit4);
 });
 
 test('проверка получения урона персонажем', () => {
-  const unit4 = {
+  const unit6 = {
     name: 'стрелок',
     type: 'Boweman',
     health: 92.5,
@@ -44,7 +44,7 @@ test('проверка получения урона персонажем', () =
     attack: 25,
     defence: 25,
   };
-  const unit = new Character('стрелок', 'Boweman');
-  unit.damage(10)
-  expect(unit).toEqual(unit4);
+  const unit7 = new Character('стрелок', 'Boweman');
+  unit7.damage(10)
+  expect(unit7).toEqual(unit6);
 });

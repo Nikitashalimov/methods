@@ -1,8 +1,8 @@
 import Boweman from '../boweman';
 
 test('проверка персонажа-лучника', () => {
-  const unit1 = new Boweman('лучник', 'Boweman');
-  const unit2 = {
+  const unit = new Boweman('лучник', 'Boweman');
+  const unit1 = {
     name: 'лучник',
     type: 'Boweman',
     health: 100,
@@ -10,5 +10,5 @@ test('проверка персонажа-лучника', () => {
     attack: 25,
     defence: 25,
   };
-  expect(unit1).toEqual(unit2);
+  expect(unit).toEqual(unit1);
 });
