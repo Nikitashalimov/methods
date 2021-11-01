@@ -1,8 +1,8 @@
 import Zombie from '../zombie';
 
 test('проверка персонажа-зомби', () => {
-  const unit1 = new Zombie('зомби', 'Zombie');
-  const unit2 = {
+  const unit = new Zombie('зомби', 'Zombie');
+  const unit1 = {
     name: 'зомби',
     type: 'Zombie',
     health: 100,
@@ -10,5 +10,5 @@ test('проверка персонажа-зомби', () => {
     attack: 40,
     defence: 10,
   };
-  expect(unit1).toEqual(unit2);
+  expect(unit).toEqual(unit1);
 });

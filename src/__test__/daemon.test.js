@@ -1,8 +1,8 @@
 import Daemon from '../daemon';
 
 test('проверка персонажа-демона', () => {
-  const unit1 = new Daemon('демон', 'Daemon');
-  const unit2 = {
+  const unit = new Daemon('демон', 'Daemon');
+  const unit1 = {
     name: 'демон',
     type: 'Daemon',
     health: 100,
@@ -10,5 +10,5 @@ test('проверка персонажа-демона', () => {
     attack: 10,
     defence: 40,
   };
-  expect(unit1).toEqual(unit2);
+  expect(unit).toEqual(unit1);
 });

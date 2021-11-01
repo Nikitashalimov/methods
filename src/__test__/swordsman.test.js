@@ -1,8 +1,8 @@
 import Swordsman from '../swordsman';
 
 test('проверка персонажа-мечника', () => {
-  const unit1 = new Swordsman('мечник', 'Swordsman');
-  const unit2 = {
+  const unit = new Swordsman('мечник', 'Swordsman');
+  const unit1 = {
     name: 'мечник',
     type: 'Swordsman',
     health: 100,
@@ -10,5 +10,5 @@ test('проверка персонажа-мечника', () => {
     attack: 40,
     defence: 10,
   };
-  expect(unit1).toEqual(unit2);
+  expect(unit).toEqual(unit1);
 });

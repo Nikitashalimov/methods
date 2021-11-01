@@ -1,8 +1,8 @@
 import Magician from '../magician';
 
 test('проверка персонажа-мага', () => {
-  const unit1 = new Magician('маг', 'Magician');
-  const unit2 = {
+  const unit = new Magician('маг', 'Magician');
+  const unit1 = {
     name: 'маг',
     type: 'Magician',
     health: 100,
@@ -10,5 +10,5 @@ test('проверка персонажа-мага', () => {
     attack: 10,
     defence: 40,
   };
-  expect(unit1).toEqual(unit2);
+  expect(unit).toEqual(unit1);
 });

@@ -1,8 +1,8 @@
 import Undead from '../undead';
 
 test('проверка персонажа-нежить', () => {
-  const unit1 = new Undead('нежить', 'Undead');
-  const unit2 = {
+  const unit = new Undead('нежить', 'Undead');
+  const unit1 = {
     name: 'нежить',
     type: 'Undead',
     health: 100,
@@ -10,5 +10,5 @@ test('проверка персонажа-нежить', () => {
     attack: 25,
     defence: 25,
   };
-  expect(unit1).toEqual(unit2);
+  expect(unit).toEqual(unit1);
 });
