@@ -36,6 +36,12 @@ test('проверка повышение уровня персонажем', ()
   expect(unit).toEqual(unit1);
 });
 
+test('проверка повышение уровня мертвого персонажа', () => {
+  const unit = new Boweman('робингуд', 'Boweman');
+  unit.health = 0;
+  expect(() => unit.levelUp()).toThrow('it is impossible to level up a dead character');
+});
+
 test('проверка получения урона персонажем', () => {
   const unit1 = {
     name: 'стрелок',
@@ -48,4 +54,16 @@ test('проверка получения урона персонажем', () =
   const unit = new Boweman('стрелок', 'Boweman');
   unit.damage(10);
   expect(unit).toEqual(unit1);
+});
+
+test('проверка получения урона мертвым персонажем', () => {
+  const unit = new Boweman('робингуд', 'Boweman');
+  unit.health = 0;
+  expect(() => unit.damage(10)).toThrow('the character is dead');
+});
+
+test('смерть персонажа после получения урона', () => {
+  const unit = new Boweman('стрелок', 'Boweman');
+  unit.health = 5;
+  expect(() => unit.damage(10)).toThrow('the character is dead');
 });
