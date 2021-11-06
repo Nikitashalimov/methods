@@ -1,7 +1,7 @@
 import Zombie from '../zombie';
 
 test('проверка персонажа-зомби', () => {
-  const unit = new Zombie('зомби', 'Zombie');
+  const unit = new Zombie('зомби');
   const unit1 = {
     name: 'зомби',
     type: 'Zombie',

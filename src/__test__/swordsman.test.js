@@ -1,7 +1,7 @@
 import Swordsman from '../swordsman';
 
 test('проверка персонажа-мечника', () => {
-  const unit = new Swordsman('мечник', 'Swordsman');
+  const unit = new Swordsman('мечник');
   const unit1 = {
     name: 'мечник',
     type: 'Swordsman',
